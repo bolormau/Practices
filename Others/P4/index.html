@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CEO INFOS</title>
+  </head>
+  <body class="dark">
+    <div class="main">
+      <!-- <div class="sheet-header"> -->
+      <!-- Name filter (buttons for some example names) -->
+      <!-- <div>
+          <label>Name</label>
+          <div class="multi-select" id="filter-name-select" tabindex="0">
+            <div class="select-box">
+              <span class="placeholder">Select Name</span>
+              <div class="arrow">&#9662;</div>
+            </div>
+            <div class="options">
+              <button
+                type="button"
+                onclick="filterByName('Elon Musk')"
+                data-value="Elon Musk"
+              >
+                Elon Musk
+              </button>
+              <button
+                type="button"
+                onclick="SamAltman()"
+                data-value="Sam Altman"
+              >
+                Sam Altman
+              </button>
+              <button type="button" data-value="Sundar Pichai">
+                Sundar Pichai
+              </button>
+              <button type="button" data-value="Mark Zuckerberg">
+                Mark Zuckerberg
+              </button>
+              <button type="button" data-value="null">Other / None</button>
+            </div>
+          </div>
+        </div> -->
+
+      <!-- Career filter (buttons) -->
+      <!-- <div>
+          <label>Career</label>
+          <div class="multi-select" id="filter-career-select" tabindex="0">
+            <div class="select-box">
+              <span class="placeholder">Select Career</span>
+              <div class="arrow">&#9662;</div>
+            </div>
+            <div class="options">
+              <button type="button" data-value="CEO of Tesla">
+                CEO of Tesla
+              </button>
+              <button type="button" data-value="CEO of OpenAI">
+                CEO of OpenAI
+              </button>
+              <button type="button" data-value="CEO of Google">
+                CEO of Google
+              </button>
+              <button type="button" data-value="CEO of Meta">
+                CEO of Meta
+              </button>
+              <button type="button" data-value="Founder of Amazon">
+                Founder of Amazon
+              </button>
+              <button type="button" data-value="null">Other / None</button>
+            </div>
+          </div>
+        </div> -->
+
+      <!-- University multi-select -->
+      <!-- <div>
+          <label>University (Ivy League)</label>
+          <div class="multi-select" id="filter-university-select" tabindex="0">
+            <div class="select-box">
+              <span class="placeholder">Select University</span>
+              <div class="arrow">&#9662;</div>
+            </div>
+            <div class="options">
+              <button type="button" data-value="Harvard University">
+                Harvard University
+              </button>
+              <button type="button" data-value="Yale University">
+                Yale University
+              </button>
+              <button type="button" data-value="Princeton University">
+                Princeton University
+              </button>
+              <button type="button" data-value="Columbia University">Columbia University</button>
+              <button type="button" data-value="University of Pennsylvania">University of Pennsylvania</button>
+              <button type="button" data-value="Dartmouth College">Dartmouth College</button>
+              <button type="button" data-value="Brown University">Brown University</button>
+              <button type="button" data-value="Cornell University">Cornell University</button>
+              <button type="button" data-value="null">Other / None</button>
+            </div>
+          </div>
+        </div> -->
+
+      <!-- Major multi-select -->
+      <!-- <div>
+          <label>Major</label>
+          <div class="multi-select" id="filter-major-select" tabindex="0">
+            <div class="select-box">
+              <span class="placeholder">Select Major</span>
+              <div class="arrow">&#9662;</div>
+            </div>
+            <div class="options">
+              <button type="button" data-value="Computer Science">
+                Computer Science
+              </button>
+              <button type="button" data-value="Electrical Engineering">
+                Electrical Engineering
+              </button>
+              <button type="button" data-value="MBA">MBA</button>
+              <button type="button" data-value="Economics">Economics</button>
+              <button type="button" data-value="Physics">Physics</button>
+              <button type="button" data-value="Materials Science">Materials Science</button>
+              <button type="button" data-value="History and Literature">History and Literature</button>
+              <button type="button" data-value="Psychology">Psychology</button>
+              <button type="button" data-value="null">Other / None</button>
+            </div>
+          </div>
+        </div> -->
+
+      <!-- Note multi-select -->
+      <!-- <div>
+          <label>Note</label>
+          <div class="multi-select" id="filter-note-select" tabindex="0">
+            <div class="select-box">
+              <span class="placeholder">Select Note</span>
+              <div class="arrow">&#9662;</div>
+            </div>
+            <div class="options">
+              <button type="button" data-value="Dropped out">
+                Dropped out
+              </button>
+              <button type="button" data-value="null">None</button>
+            </div>
+          </div>
+        </div> -->
+
+      <!-- Net Worth multi-select -->
+      <!-- <div>
+          <label>Net Worth</label>
+          <div class="multi-select" id="filter-networth-select" tabindex="0">
+            <div class="select-box">
+              <span class="placeholder">Select Net Worth</span>
+              <div class="arrow">&#9662;</div>
+            </div>
+            <div class="options">
+              <button
+                type="button"
+                onclick="changeList(ls10b());"
+                data-value="lt10b"
+              >
+                Less than 10B
+              </button>
+              <button
+                type="button"
+                onclick="changeList(gte10b())"
+                data-value="gte10b"
+              >
+                10B or more
+              </button>
+              <button
+                type="button"
+                onclick="changeList(displayAll())"
+                data-value="null"
+              >
+                All
+              </button>
+            </div>
+          </div>
+        </div> -->
+      <!-- </div> -->
+
+      <!-- Table for displaying data -->
+
+      <div class="table-controls">
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="Search table content..."
+          aria-label="Search through table"
+        />
+
+        <button id="dark-toggle" aria-label="Toggle dark mode">
+          🌙 Dark Mode
+        </button>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>
+              Name
+              <div class="btn-group">
+                <button onclick="nameSorter('asc')">A↓</button>
+                <button onclick="nameSorter('desc')">Z↑</button>
+              </div>
+            </th>
+            <th>
+              Career
+              <div class="btn-group">
+                <button onclick="careerFilter('ceo')">CEO</button>
+                <button onclick="careerFilter('founder')">Founder</button>
+                <button onclick="careerFilter('co-founder')">Co-founder</button>
+                <button onclick="careerFilter('chairman')">Chairman</button>
+              </div>
+            </th>
+            <th>
+              Net Worth
+              <div class="btn-group">
+                <button onclick="netWorthSorter('asc')">↓</button>
+                <button onclick="netWorthSorter('desc')">↑</button>
+                <button onclick="netWorthFilter('gte10b')">+10B</button>
+                <button onclick="netWorthFilter('lt10b')">-10B</button>
+              </div>
+            </th>
+            <th>
+              Universities
+              <div class="btn-group">
+                <button onclick="univSorter('asc')">A↓</button>
+                <button onclick="univSorter('desc')">Z↑</button>
+                <button onclick="univFilter('ivy')">Only IVY</button>
+              </div>
+            </th>
+            <th>
+              Majors
+              <div class="btn-group">
+                <button onclick="majorFilter('CS')">CS</button>
+                <button onclick="majorFilter('MBA')">MBA</button>
+                <button onclick="majorFilter('MATH')">MATH</button>
+                <button onclick="majorFilter('PS')">PS</button>
+              </div>
+            </th>
+            <th>
+              Note
+              <div class="btn-group">
+                <button onclick="noteFilter()">drop</button>
+              </div>
+            </th>
+            <th>
+              Email
+              <div class="btn-group">
+                <button onclick="emailSorter('asc')">A↓</button>
+                <button onclick="emailSorter('desc')">Z↑</button>
+              </div>
+            </th>
+            <th>
+              Birthday
+              <div class="btn-group">
+                <button onclick="birthdaySorter('asc')">↑</button>
+                <button onclick="birthdaySorter('desc')">↓</button>
+              </div>
+            </th>
+            <th>
+              Extra 1
+              <div class="btn-group">
+                <button onclick="birthdaySorter('asc')">↑</button>
+                <button onclick="birthdaySorter('desc')">↓</button>
+              </div>
+            </th>
+            <th>
+              Extra 2
+              <div class="btn-group">
+                <button onclick="birthdaySorter('asc')">↑</button>
+                <button onclick="birthdaySorter('desc')">↓</button>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="table-content">
+          <!-- JS will populate rows here -->
+        </tbody>
+      </table>
+
+      <!-- // <td class="univ2 null-value">${ceoInfo[i].university2 || "-"}</td>
+      // <td class="univ3 null-value">${ceoInfo[i].university3 || "-"}</td> -->
+
+      <!--       // <td class="major2">${ceoInfo[i].major2 || "-"}</td>
+      // <td class="major3 null-value">${ceoInfo[i].major3 || "-"}</td> -->
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

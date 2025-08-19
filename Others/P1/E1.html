@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS First Day</title>
+
+  <style>
+
+
+  </style>
+</head>
+
+<body>
+  <script>
+    //  1. Sale 
+    let actualPrice = 40000;
+    let salePercent = 30;
+
+    function afterSale() {
+      let saleAmount = actualPrice * 30 / 100;
+      let priceAfterSale = actualPrice - saleAmount;
+      console.log("1. Price after sale: " + priceAfterSale);
+    } 
+
+    afterSale();
+
+    // 2. Average score on test
+    let testCount = 3;
+    let score1 = 89;
+    let score2 = 94.9;
+    let score3 = 71.3;
+    let sum = 0;
+    let avg = 0;
+
+    function printAverageScore() {
+      sum = score1 + score2 + score3;
+      avg = sum / testCount;
+      console.log("2. Average test score: " + avg);
+    }
+
+    printAverageScore();
+
+    // 3. Area of rectangle
+    let width = 232;
+    let height = 450;
+    let area = 0;
+    let perimeter = 0;
+    let scale = "meter"
+
+    function printAreaOfRectangle() {
+      area = width * height;
+      console.log("3.1. Area of rectangle: " + area + scale);
+    }
+
+    function printPerimeterOfRectangle() {
+      area = width + height;
+      console.log("3.2. Perimeter of rectangle: " + area + scale);
+    }
+
+    printAreaOfRectangle();
+    printPerimeterOfRectangle();
+
+    // 4. Celsius to Fahrenheit: 21C = ? 
+    let cels = 21;
+    let fahr = 0;
+
+    function printCelsToFahr() {
+      console.log("4.1. Celsius to Fahrenheit: " + (fahr = cels * 9 / 5 + 32) + "F");
+    }
+
+    function printFahrToCels() {
+      console.log("4.2. Fahrenheit to Celsius: " + (cels = (fahr - 32) * 5 / 9) + "C");
+    }
+
+    printCelsToFahr();
+    printFahrToCels();
+
+    // 5. Convert minute to hour: min = 200
+    let min = 200;
+    let hour = 0;
+
+    function printMinToHour() {
+      console.log("5.1. Minute to hour: " + (hour = min / 60) + "hour");
+    }
+
+    function printHourToMin() {
+      console.log("5.2. Hour to minute: " + (min = hour / 60) + "min")
+    }
+
+    printMinToHour();
+    printHourToMin();
+
+    // =========================================
+    // ------- Operater -------
+
+    // == doesn't matter data type 
+    // === - consider data type
+
+    // ------- Prompt (scanf + alert) -------
+
+    // 1. Check if user's age is allowed to enter Night Club.
+    // let stringAge = prompt("Please, enter your age: ");
+    // let intAge = Number(stringAge);
+    // let isAllowed = (intAge>=21 );
+    // console.log("Is it true that you allowed to enter Night Club: " + isAllowed);
+
+    // ------- Logic Operator -------
+
+    // 2. Check if user's age is 21-30.
+    // 3. Check if user has an invitation and his/her age is 21+.
+    let age1 = prompt("Mr.John, enter your age, please: ");
+    let age2 = prompt("Ms.Sarah, enter your age, please: ");
+    let JohnHasInvitation = true;
+    let SarahHasInvitation = false;
+
+    let JohnsAge = Number(age1);
+    let SarahsAge = Number(age2);
+
+    let isBothAllowedByAge = (((JohnsAge >= 21) && (JohnsAge <= 30)) && ((SarahsAge >= 21) && (SarahsAge <= 30)));
+    let isOnlyOneAllowedByAge = ((JohnsAge || SarahsAge) >= 21 || (JohnsAge || SarahsAge) <= 30);
+    let isBothAllowed = (((JohnsAge && SarahsAge) >= 21 && (JohnsAge && SarahsAge) <= 30) && ((JohnHasInvitation && SarahHasInvitation) == true))
+
+    console.log("Is it true that you guys both allowed to enter Night Club BY AGE: " + isBothAllowedByAge);
+    console.log("Is it true that either one of you guys allowed to enter Night Club BY AGE: " + isOnlyOneAllowedByAge);
+    console.log("Is it true that you guys both allowed to enter Night Club BY ALL CONDITION: " + isBothAllowed);
+
+
+    // 4. Check if user's name and pass are matching
+    // let usernameSaved = "Biden";
+    // let passwordSaved = "Kill Trump";
+
+    // let username = prompt("Please, enter your username: ");
+    // let password = prompt("Please, enter your password: ");
+
+    // let isMatching = ((usernameSaved == username) && (passwordSaved == password));
+    // let isUsernameOrPasswordNotMatching = ((usernameSaved != username) || (passwordSaved != password));
+    // let isBothNotMatching = ((usernameSaved != username) && (passwordSaved != password))
+
+    // console.log("Is it true that your username and password are both matched: " + isMatching);
+    // console.log("Is it true that either of your username or password matched: " + isUsernameOrPasswordNotMatching);
+    // console.log("Is it true that your username and password are both not matched: " + isBothNotMatching);
+
+
+    // // 5. Check if user got 18+ score and passed his drom exam.
+    // let testScore = prompt("Please, enter your test score: ");
+    // let passedDromExam = true;
+
+    // let gonnaGetDriversLicense = ((testScore >= 18) && (passedDromExam == true));
+
+    // console.log("Is it true that you're gonna get you driver's license: " + gonnaGetDriversLicense)
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Java Script Problems</title>
+  </head>
+  <body>
+    <!-- <button class="button-85"></button> -->
+    <script src="script.js"></script>
+
+    <div class="questions mt-4 ml-4 mr-4">
+      <!-- <div class="question3 question message is-dark">
+        <div class="message-header">
+          <p>Area or Perimeter of Rectangle</p>
+          <button class="delete" aria-label="delete"></button>
+        </div>
+        <div class="message-body" id="result">Click the button you want to see result of.
+          <div class="question area">
+            <button class="button is-danger is-inverted area" onclick="areaOfRec();">AREA of rectangle</button>
+            <article class="message is-dark">
+            <div class="message-body" id="result">Then results wiil appear here.</div>
+          </div>
+          <div class="question perimeter">
+            <button class="button is-info is-inverted perimeter" onclick="perimeterOfRec();">PERIMETER</button>
+            <article class="message is-dark">
+            <div class="message-body" id="result">Then results wiil appear here.</div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="question-container">
+        <div class="question2-1 question message is-dark">
+          <div class="message-header">
+            <p>3. Even or Odd</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body" id="result1">
+            <p>Please, click INPUT button to check.</p>
+            <div class="question-content evenOrOdd">
+              <button
+                class="button is-danger is-inverted area"
+                onclick="checkEvenOrOdd();"
+              >
+                INPUT
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result1">
+                  Then results wiil appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-2 question message is-dark">
+          <div class="message-header">
+            <p>4. Age Group</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <p>Please, click INPUT button to check your age.</p>
+            <div class="question-content evenOrOdd">
+              <button
+                class="button is-danger is-inverted area"
+                onclick="checkAgeGroup();"
+              >
+                INPUT
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result2">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-3 question message is-dark">
+          <div class="message-header">
+            <p>5. Log-in System</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <p>Please, click INPUT button to check.</p>
+            <div class="question-content">
+              <button
+                class="button is-info is-inverted area"
+                onclick="loginSystem();"
+              >
+                Log-in
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result3">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-4 question message is-dark">
+          <div class="message-header">
+            <p>6. Greater Number</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <p>Please, click INPUT button to check.</p>
+            <div class="question-content">
+              <button
+                class="button is-info is-inverted area"
+                onclick="largerNumber();"
+              >
+                Input
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result4">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-5 question message is-dark">
+          <div class="message-header">
+            <p>7. Traffic Light</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <p>Please, click INPUT button to check.</p>
+            <div class="question-content">
+              <button
+                class="button is-info is-inverted area"
+                onclick="trafficLight();"
+              >
+                Input
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result5">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-6 question message is-dark">
+          <div class="message-header">
+            <p>8. Rock Paper Scissor</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <p>Rock: 1 <br />Paper: 2 <br />Scissor: 3</p>
+            <div class="question-content">
+              <button
+                class="button is-info is-inverted area"
+                onclick="rockPaperScissor();"
+              >
+                Input
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result6">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-7 question message is-dark">
+          <div class="message-header">
+            <p>Score to Grade</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <p>Check your grade</p>
+            <div class="question-content">
+              <button
+                class="button-85 is-info is-inverted area"
+                onclick="scoreToGrade();"
+              >
+                Input
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result7">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-8 question message is-dark">
+          <div class="message-header">
+            <p>9. Simple Calculator</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <p>Enter 2 operand and and operator.</p>
+            <div class="question-content">
+              <button
+                class="button-85 is-info is-inverted area"
+                onclick="operate();"
+              >
+                Operate
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result8">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-9 question message is-dark">
+          <div class="message-header">
+            <p>10. Simple Calculator with Tab</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <div class="message is-dark">
+              <div class="message-body" id="result8">Result</div>
+            </div>
+            <div class="question-content">
+              <div class="keypad">
+                <button class="button-85" onclick="num1();">1</button>
+                <button
+                  class="button-85 is-info is-inverted area"
+                  onclick="num2();"
+                >
+                  2
+                </button>
+                <button
+                  class="button-85 is-info is-inverted area"
+                  onclick="num3();"
+                >
+                  3
+                </button>
+                <button
+                  class="button is-info is-inverted area"
+                  onclick="num4();"
+                >
+                  4
+                </button>
+                <button
+                  class="button is-info is-inverted area"
+                  onclick="num5();"
+                >
+                  5
+                </button>
+                <button
+                  class="button is-info is-inverted area"
+                  onclick="num6();"
+                >
+                  6
+                </button>
+                <button
+                  class="button is-info is-inverted area"
+                  onclick="num7();"
+                >
+                  7
+                </button>
+                <button
+                  class="button is-info is-inverted area"
+                  onclick="num8();"
+                >
+                  8
+                </button>
+                <button
+                  class="button is-info is-inverted area"
+                  onclick="num9();"
+                >
+                  9
+                </button>
+                <button
+                  class="button is-info is-inverted area"
+                  onclick="num0();"
+                >
+                  0
+                </button>
+              </div>
+              <div class="operators">
+                <button
+                  class="button is-info is-inverted area"
+                  onclick="operate();"
+                >
+                  +
+                </button>
+                <button
+                  class="button is-info is-inverted area"
+                  onclick="operate();"
+                >
+                  -
+                </button>
+                <button
+                  class="button is-info is-inverted area"
+                  onclick="operate();"
+                >
+                  *
+                </button>
+                <button
+                  class="button is-info is-inverted area"
+                  onclick="operate();"
+                >
+                  /
+                </button>
+                <button
+                  class="button is-info is-inverted area"
+                  onclick="operate();"
+                >
+                  %
+                </button>
+                <button
+                  class="button is-info is-inverted area"
+                  onclick="operate();"
+                >
+                  =
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-7 question message is-dark">
+          <div class="message-header">
+            <p>10. Check Weekday</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <p>Enter a weekday.</p>
+            <div class="question-content">
+              <button class="button-85" onclick="weekday();">Input</button>
+              <div class="message is-dark">
+                <div class="message-body" id="result10">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-11 question message is-dark">
+          <div class="message-header">
+            <p>11. Check Leap year</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <p>Enter year.</p>
+            <div class="question-content">
+              <button class="button-85" onclick="isLeapYear();">Input</button>
+              <div class="message is-dark">
+                <div class="message-body" id="result11">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-12 question message is-dark">
+          <div class="message-header">
+            <p>12. Triangle Checker</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <div class="question-content">
+              <button
+                class="button-85 is-info is-inverted area"
+                onclick="triangleChecker();"
+              >
+                Input
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result12">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-13 question message is-dark">
+          <div class="message-header">
+            <p>13. Clock converter</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <p>Enter year.</p>
+            <div class="question-content">
+              <button
+                class="button-85 is-info is-inverted area"
+                onclick="clockConverter();"
+              >
+                Input
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result13">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-14 question message is-dark">
+          <div class="message-header">
+            <p>14. Month Days</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <p>Enter a month.</p>
+            <div class="question-content">
+              <button
+                class="button-85 is-info is-inverted area"
+                onclick="dayOfMonthsChecker();"
+              >
+                Input
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result14">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-15 question message is-dark">
+          <div class="message-header">
+            <p>15. ATM Withdrawal</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <p>Enter your money amount.</p>
+            <div class="question-content">
+              <button
+                class="button-85 is-info is-inverted area"
+                onclick="withdrawal();"
+              >
+                Input
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result15">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-16 question message is-dark">
+          <div class="message-header">
+            <p>16. Employee bonus calculator</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <div class="question-content">
+              <button
+                class="button-85 is-info is-inverted area"
+                onclick="employeeBonus();"
+              >
+                Input
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result16">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-17 question message is-dark">
+          <div class="message-header">
+            <p>16. Employee bonus calculator</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <div class="question-content">
+              <button
+                class="button-85 is-info is-inverted area"
+                onclick="calculatePriceAfterDiscount();"
+              >
+                Input
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result17">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question2-18 question message is-dark">
+          <div class="message-header">
+            <p>18. Check prime number</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <div class="question-content">
+              <button
+                class="button-85 is-info is-inverted area"
+                onclick="checkPrimeNumber();"
+              >
+                Input
+              </button>
+              <div class="message is-dark">
+                <div class="message-body" id="result18">
+                  Then results will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  
+      
+    </div>
+  </body>
+</html>
