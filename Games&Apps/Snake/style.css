@@ -1,0 +1,78 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  font-size: 100px;
+  font-family: "Rubik Pixels", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.game-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 1250px;
+  height: 1320px;
+  padding: 30px;
+  gap: 30px;
+  /* background-color: rgb(28, 51, 43); */
+  border-style: hidden;
+  border-radius: 30px;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 80px;
+  /* background-color: rgb(12, 30, 24); */
+
+  font-size: 30px;
+  font-family: "Rubik Pixels", system-ui;
+  color: rgb(130, 187, 144);
+}
+
+.score {
+  display: flex;
+  gap: 5px;
+}
+
+.board {
+  min-width: 1200px;
+  min-height: 1200px;
+  background-color: rgb(36, 35, 35);
+  background-image: url("images/snake-board.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.snake {
+  width: 21px;
+  height: 21px;
+  margin: 3px;
+  border-style: hidden;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+}
