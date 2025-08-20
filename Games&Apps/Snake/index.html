@@ -16,8 +16,6 @@
     <title>Snake Game</title>
   </head>
   <body>
-    <script src="script.js"></script>
-
     <div class="main">
       <!-- <p class="title">SNAKE</p> -->
       <div class="game-frame">
@@ -31,10 +29,23 @@
             <button class="quit">X</button> -->
           </div>
         </div>
-        <div class="board">
-          <div class="snake"></div>
+
+        <div class="board" id="board">
+          <div id="tails"></div>
+          <div class="food" id="food"></div>
+        </div>
+
+        <div class="dir-button-container">
+          <button id="left-button" onclick="changeDir('left')"></button>
+          <div id="up-button" class="up-down-buttons">
+            <button id="down-button" onclick="changeDir('up')"></button>
+            <button id="right-button" onclick="changeDir('down')"></button>
+          </div>
+          <button onclick="changeDir('right')"></button>
         </div>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
