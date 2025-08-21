@@ -24,35 +24,64 @@
 // === Config ===============
 const unit = 20;
 const board = { height: 35, width: 35 }; // object
-const head = { x: 18, y: 18 };
-const tails = [
-  { x: 17, y: 18 },
-  { x: 18, y: 18 },
-];
 
-// let dir = "right"; // dir init value
+let head = { x: 0, y: 0 };
 let food = { x: 0, y: 0 };
+let tails = [
+  { x: 0, y: 0 },
+  { x: 0, y: 0 },
+];
+let dir = "";
+let hightScore = 0; // use local storage
+let score = 0;
 
 // === Structures ==============
 
 const boardElement = document.getElementById("board");
 const tailsElement = document.getElementById("tails");
 const foodElement = document.getElementById("food");
+const scoreElement = document.getElementById("score-text");
+
+// button elements
+const restartElement = document.getElementById("restart-button");
 
 function init() {
-  const boardWidth = board.width * unit;
-  const boardHeight = board.height * unit;
-
-  boardElement.style.width = `${boardWidth}px`;
-  boardElement.style.height = `${boardHeight}px`;
-
+  boardGenerator();
+  snakeGenerator();
   foodGenerator();
+  dirGenerator();
 }
-
 init();
 
 function randomNumGenr(scale) {
   return Math.floor(Math.random() * scale);
+}
+
+function boardGenerator() {
+  const boardWidth = board.width * unit;
+  const boardHeight = board.height * unit;
+  boardElement.style.width = `${boardWidth}px`;
+  boardElement.style.height = `${boardHeight}px`;
+}
+
+function snakeGenerator() {
+  head = {
+    x: randomNumGenr(board.width - 10) + 5,
+    y: randomNumGenr(board.height - 10) + 5,
+  };
+
+  tails = [
+    { x: head.x - 1, y: head.y },
+    { x: head.x, y: head.y },
+  ];
+}
+
+function dirGenerator() {
+  dirNum = randomNumGenr(4);
+  if (dirNum === 1) dir = "right";
+  else if (dirNum === 2) dir = "left";
+  else if (dirNum === 3) dir = "up";
+  else if (dirNum === 4) dir = "down";
 }
 
 function foodGenerator() {
@@ -69,30 +98,35 @@ function foodGenerator() {
 }
 
 function changeDir(newDir) {
-  dir = newDir;
+  if (dir === "up" || dir === "down") {
+    if (newDir === "left" || newDir === "right") dir = newDir;
+  } else {
+    if (newDir === "up" || newDir === "down") dir = newDir;
+  }
+
+  // if (!isXAxis) dir = newDir;
 }
 
-function stop() {}
+let isXAxis = true;
 
 function goRight() {
-  head.x += 1; // increase by an unit
-  if (head.x === board.width) head.x = 0;
+  head.x += 1;
+  isXAxis = true;
 }
-// ⌃ add die result
 
 function goLeft() {
   head.x -= 1;
-  if (head.x < 0) head.x = board.width - 1;
+  isXAxis = true;
 }
 
 function goDown() {
   head.y += 1;
-  if (head.y === board.height) head.y = 0;
+  isXAxis = false;
 }
 
 function goUp() {
   head.y -= 1;
-  if (head.x < 0) head.y = board.height - 1;
+  isXAxis = false;
 }
 
 function render() {
@@ -113,8 +147,10 @@ function render() {
   tailsElement.innerHTML = tailsHTML;
 }
 
-let dir = "right"; // dir init value
-// let isXAxis = true;
+function stop() {
+  dir = null;
+  tailsElement.style.backgroundColor = `brown`;
+}
 
 setInterval(() => {
   if (dir === "right") {
@@ -125,29 +161,40 @@ setInterval(() => {
     goDown();
   } else if (dir === "up") {
     goUp();
-  }
+  } else if (dir === null) return;
 
-  tails.push({ x: head.x, y: head.y });
-  tails.shift();
+  if (
+    0 <= head.x &&
+    head.x < board.width &&
+    0 <= head.y &&
+    head.y < board.height
+  ) {
+    tails.push({ x: head.x, y: head.y });
+    tails.shift();
+  } else {
+    // init();
+    stop();
+  }
 
   if (head.x === food.x && head.y === food.y) {
     tails.push({ x: head.x, y: head.y });
     foodGenerator();
+    score++;
+    scoreElement.textContent = score;
   }
 
   render();
-}, 150);
+}, 100);
 
 addEventListener("keydown", (event) => {
-  if (event.key === "ArrayLeft") {
+  if (event.key == "ArrowLeft") {
     changeDir("left");
-  } else if (event.key === "ArrayUp") {
+  } else if (event.key == "ArrowUp") {
     changeDir("up");
-  } else if (event.key === "ArrayDown") {
+  } else if (event.key == "ArrowDown") {
     changeDir("down");
-  } else if (event.key === "ArrayRight") {
+  } else if (event.key == "ArrowRight") {
     changeDir("right");
-    console.log("right");
   }
 });
 

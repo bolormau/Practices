@@ -17,16 +17,18 @@
   </head>
   <body>
     <div class="main">
-      <!-- <p class="title">SNAKE</p> -->
+      <p class="title">SNAKE</p>
       <div class="game-frame">
         <div class="header">
           <div class="score">
-            <!-- <div class="apple-img">apple</div>
-            <p class="score-text">3</p> -->
+            <div class="apple-img"><p>score:</p></div>
+            <p class="score-text" id="score-text">0</p>
           </div>
           <div class="button-container">
-            <!-- <button class="start">restart</button>
-            <button class="quit">X</button> -->
+            <button class="restart" id="restart-button" onclick="init()">
+              restart
+            </button>
+            <button class="quit">X</button>
           </div>
         </div>
 
@@ -36,7 +38,9 @@
         </div>
 
         <div class="dir-button-container">
-          <button id="left-button" onclick="changeDir('left')"></button>
+          <button id="left-button" onclick="changeDir('left')">
+            <p>⇠</p>
+          </button>
           <div id="up-button" class="up-down-buttons">
             <button id="down-button" onclick="changeDir('up')"></button>
             <button id="right-button" onclick="changeDir('down')"></button>
