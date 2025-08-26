@@ -8,18 +8,16 @@
 // rotate or die when chundul to frame
 // buttons
 
-// set interval
-// random
-// f to switch direction
-// input to take direction
-// dir === y -> left(), right(); dir = x
-// dir === x -> up(), down(); dir = y
-// make wall scalable (with breaks)
-// always save rotated position
-// event listener
-// 35sqr - h
-
 // fix food generator - if food generated in body pos, ...
+// change buttons
+// fix food pos
+// is board generation needed??
+// stop function
+// change died style
+// sometimes snake body = 1
+// body
+// high score
+//
 
 // === Config ===============
 const unit = 20;
@@ -34,9 +32,9 @@ let tails = [
 let dir = "";
 let hightScore = 0; // use local storage
 let score = 0;
+let dirRequest = "";
 
 // === Structures ==============
-
 const boardElement = document.getElementById("board");
 const tailsElement = document.getElementById("tails");
 const foodElement = document.getElementById("food");
@@ -78,10 +76,10 @@ function snakeGenerator() {
 
 function dirGenerator() {
   dirNum = randomNumGenr(4);
-  if (dirNum === 1) dir = "right";
-  else if (dirNum === 2) dir = "left";
-  else if (dirNum === 3) dir = "up";
-  else if (dirNum === 4) dir = "down";
+  if (dirNum === 1) dirRequest = "right";
+  else if (dirNum === 2) dirRequest = "left";
+  else if (dirNum === 3) dirRequest = "up";
+  else if (dirNum === 4) dirRequest = "down";
 }
 
 function foodGenerator() {
@@ -89,6 +87,12 @@ function foodGenerator() {
     x: randomNumGenr(board.width),
     y: randomNumGenr(board.height),
   };
+
+  const isFoodUnderTheBody = tails.some(
+    (tail) => tail.x === food.x && tail.y === food.y
+  );
+
+  if (isFoodUnderTheBody) foodGenerator();
 
   foodElement.style.width = `${unit}px`;
   foodElement.style.height = `${unit}px`;
@@ -99,9 +103,9 @@ function foodGenerator() {
 
 function changeDir(newDir) {
   if (dir === "up" || dir === "down") {
-    if (newDir === "left" || newDir === "right") dir = newDir;
+    if (newDir === "left" || newDir === "right") dirRequest = newDir;
   } else {
-    if (newDir === "up" || newDir === "down") dir = newDir;
+    if (newDir === "up" || newDir === "down") dirRequest = newDir;
   }
 
   // if (!isXAxis) dir = newDir;
@@ -152,7 +156,9 @@ function stop() {
   tailsElement.style.backgroundColor = `brown`;
 }
 
-setInterval(() => {
+function gameLoop() {
+  dir = dirRequest;
+
   if (dir === "right") {
     goRight();
   } else if (dir === "left") {
@@ -162,16 +168,21 @@ setInterval(() => {
   } else if (dir === "up") {
     goUp();
   } else if (dir === null) return;
+}
+
+setInterval(() => {
+  gameLoop();
 
   if (
-    0 <= head.x &&
-    head.x < board.width &&
-    0 <= head.y &&
-    head.y < board.height
+    (0 <= head.x &&
+      head.x < board.width &&
+      0 <= head.y &&
+      head.y < board.height) ||
+    !tails.some((tail) => tail.x === tail.x && tail.y == tail.y)
   ) {
     tails.push({ x: head.x, y: head.y });
     tails.shift();
-  } else {
+  } else if (tails.some((tail) => tail.x === tail.x && tail.y == tail.y)) {
     // init();
     stop();
   }
@@ -184,7 +195,7 @@ setInterval(() => {
   }
 
   render();
-}, 100);
+}, 80);
 
 addEventListener("keydown", (event) => {
   if (event.key == "ArrowLeft") {

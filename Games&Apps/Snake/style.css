@@ -20,7 +20,8 @@ body {
 }
 
 .title {
-  color: white;
+  color: rgb(31, 187, 3);
+  /* border-style: solid; */
   font-size: 100px;
   font-family: "Rubik Pixels", system-ui;
   font-weight: 400;
@@ -37,7 +38,7 @@ body {
   gap: 20px;
   padding: 20px;
   background-color: rgb(28, 51, 43);
-  border-radius: 30px;
+  border-radius: 40px;
 }
 
 .header {
@@ -51,7 +52,7 @@ body {
 
   font-size: 30px;
   font-family: "Rubik Pixels", system-ui;
-  color: rgb(130, 187, 144);
+  color: rgb(131, 248, 68);
 }
 
 .score {
