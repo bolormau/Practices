@@ -1,0 +1,220 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.time {
+  width: 10%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.time * {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-weight: 100;
+  font-size: 10px;
+}
+
+.frame {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/solar-system-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.frame * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.line {
+  height: auto;
+  border-style: solid;
+  border-width: 0.3px;
+  border-color: rgb(255, 255, 255, 0.4);
+  position: relative;
+  z-index: 3;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.planet {
+  position: absolute;
+  width: 5%;
+  top: -2.5%;
+  left: 47.5%;
+  z-index: 4;
+}
+
+.plutoLine {
+  width: 60%;
+  animation: spin 300s linear infinite;
+}
+
+.neptuneLine {
+  width: 94%;
+  animation: spin 300s linear infinite;
+}
+
+.uranusLine {
+  width: 94%;
+  animation: spin 300s linear infinite;
+}
+
+.saturnLine {
+  width: 92%;
+  animation: spin 300s linear infinite;
+}
+
+.jupiterLine {
+  width: 90%;
+  animation: spin 300s linear infinite;
+}
+
+.marsLine {
+  width: 95%;
+  animation: spin 300s linear infinite;
+}
+
+.earthLine {
+  width: 94%;
+  animation: spin 300s linear infinite;
+}
+
+/* .moonLine {
+  width: 60%;
+  top: -3%;
+  left: 47%;
+  animation: spin 6s linear infinite;
+} */
+
+.venusLine {
+  width: 95%;
+  animation: spin 2430s linear infinite;
+}
+
+.mercuryLine {
+  width: 96%;
+  animation: spin 24s linear infinite;
+}
+
+.pluto {
+  width: 4%;
+  top: -2%;
+  left: 48%;
+  animation: spin 2s linear infinite;
+}
+
+.neptune {
+  width: 5%;
+  top: -2.5%;
+  left: 47.5%;
+  animation: spin 5s linear infinite;
+}
+
+.uranus {
+  width: 6%;
+  top: -3%;
+  left: 47%;
+  animation: spin 6s linear infinite;
+}
+
+.saturn {
+  width: 12%;
+  top: -6%;
+  left: 44%;
+  overflow: visible;
+  animation: spin 6s linear infinite;
+}
+
+.jupiter {
+  width: 15%;
+  top: -7.5%;
+  left: 42.5%;
+  animation: spin 10s linear infinite;
+}
+
+.mars {
+  width: 2%;
+  top: -1%;
+  left: 49%;
+  animation: spin 6s linear infinite;
+}
+
+.moonLine {
+  width: 4%;
+  top: -2%;
+  left: 48%;
+  animation: spin 2s linear infinite;
+}
+
+.earth {
+  width: 90%;
+}
+
+.moon {
+  width: 20%;
+  top: -20%;
+  left: 30%;
+  animation: spin 2s linear infinite;
+}
+
+.venus {
+  width: 4%;
+  top: -2%;
+  left: 48%;
+  animation: spin 24.3s linear infinite;
+}
+
+.mercury {
+  width: 2%;
+  top: -1%;
+  left: 49%;
+  animation: spin 5.8s linear infinite;
+}
+
+.sunContainer {
+  width: 90%;
+}
+
+.sun {
+  width: 100%;
+  animation: spin 36.5s linear infinite;
+  /* box-shadow: 0px 5px 50px 0px rgb(255, 187, 1, 0.7),
+    0px 5px 50px 0px rgb(255, 85, 0, 0.7); */
+}
+
+/* .plutoLine {
+  width: 60%;
+  height: auto;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  bottom: 80%;
+  right: 80%;
+} */
