@@ -101,7 +101,7 @@ const categoryListDiv = document.createElement("div");
 // Button render function
 const categoryButton = document.createElement("button");
 
-// Product List 
+// Product List
 const pCardsContainerDiv = document.createElement("div");
 const pCardsDiv = document.createElement("div");
 // Card render function

@@ -217,7 +217,7 @@ body {
 
 .sun {
   width: 100%;
-  animation: spin 876s linear infinite;
+  /* animation: spin 1000000s linear infinite; */
   box-shadow: 0px 5px 80px 0px rgb(255, 187, 1, 0.7),
     0px 5px 80px 0px rgb(255, 85, 0, 0.7);
 }
