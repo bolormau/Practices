@@ -1,9 +1,9 @@
 // import Image from "next/image";
-import { ShortsCards } from "../../components/ShortsCard";
-import { VideoCards } from "../../components/VideosCard";
-import { NavBar } from "../../components/NavBar";
-import { TagsBar } from "../../components//TagsBar";
-import { SideBar } from "../../components/SideBar";
+import { ShortsCards } from "../components/ShortsCard";
+import { VideoCards } from "../components/VideosCard";
+import { NavBar } from "../components/NavBar";
+import { TagsBar } from "../components/TagsBar";
+import { SideBar } from "../components/SideBar";
 // use @
 
 // default page to show
