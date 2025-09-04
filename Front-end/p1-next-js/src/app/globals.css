@@ -28,3 +28,27 @@ body {
   color: var(--foreground);
   font-family: Arial, sans-serif;
 }
+
+@keyframes bounce2 {
+  0%   { transform: translateY(0) translateX(0); }
+  10%  { transform: translateY(-5px) translateX(-2px); }
+  20%  { transform: translateY(-10px) translateX(2px); }
+  30%  { transform: translateY(-15px) translateX(-1px); }
+  40%  { transform: translateY(-20px) translateX(1px); }
+  50%  { transform: translateY(-25px) translateX(0); }
+  60%  { transform: translateY(-20px) translateX(-1px); }
+  70%  { transform: translateY(-15px) translateX(1px); }
+  80%  { transform: translateY(-10px) translateX(-2px); }
+  90%  { transform: translateY(-5px) translateX(2px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+
+@keyframes bounce3 {
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  50% { 
+    transform: translateY(-10px);
+  }
+}
