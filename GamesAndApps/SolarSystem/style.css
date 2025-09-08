@@ -1,0 +1,233 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.time {
+  width: 10%;
+  height: auto;
+  display: flex;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.time * {
+  font-family: "Julius Sans One", sans-serif;
+  color: white;
+  opacity: 0.9;
+  font-weight: 100;
+  font-size: 10px;
+  height: 12px;
+}
+
+.timeText {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+  align-items: center;
+}
+
+.timeCount {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  justify-self: start;
+  align-items: center;
+}
+
+.frame {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/solar-system-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.frame * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.orbit {
+  height: auto;
+  border-style: solid;
+  border-width: 0.3px;
+  border-color: rgb(255, 255, 255, 0.4);
+  position: relative;
+  z-index: 3;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.planet {
+  position: absolute;
+  width: 5%;
+  top: -2.5%;
+  left: 47.5%;
+  z-index: 4;
+}
+
+/* PLANETS ONE YEAR ROTATION DURATION AND SIZE */
+.plutoOrbit {
+  width: 60%;
+  animation: spin 217248s linear infinite;
+}
+
+.neptuneOrbit {
+  width: 94%;
+  animation: spin 144456s linear infinite;
+}
+
+.uranusOrbit {
+  width: 94%;
+  animation: spin 73648.8s linear infinite;
+}
+
+.saturnOrbit {
+  width: 92%;
+  animation: spin 25821.6s linear infinite;
+}
+
+.jupiterOrbit {
+  width: 90%;
+  animation: spin 10399.2s linear infinite;
+}
+
+.marsOrbit {
+  width: 95%;
+  animation: spin 1648.8s linear infinite;
+}
+
+.earthOrbit {
+  width: 94%;
+  animation: spin 876s linear infinite;
+}
+
+.venusOrbit {
+  width: 95%;
+  animation: spin 540s linear infinite;
+}
+
+.mercuryOrbit {
+  width: 96%;
+  animation: spin 211.2s linear infinite;
+}
+
+/* PLANET ONE DAY SIZES AND ROTATION DURATION */
+.pluto {
+  width: 4%;
+  top: -2%;
+  left: 48%;
+  animation: spin 15.3s linear infinite;
+}
+
+.neptune {
+  width: 5%;
+  top: -2.5%;
+  left: 47.5%;
+  animation: spin 1.6s linear infinite;
+}
+
+.uranus {
+  width: 6%;
+  top: -3%;
+  left: 47%;
+  animation: spin 1.7s linear infinite;
+}
+
+.saturn {
+  width: 12%;
+  top: -6%;
+  left: 44%;
+  overflow: visible;
+  animation: spin 1.1s linear infinite;
+}
+
+.jupiter {
+  width: 15%;
+  top: -7.5%;
+  left: 42.5%;
+  animation: spin 1s linear infinite;
+}
+
+.mars {
+  width: 2%;
+  top: -1%;
+  left: 49%;
+  animation: spin 2.5s linear infinite;
+}
+
+.moonOrbit {
+  width: 7%;
+  top: -3.5%;
+  left: 46.5%;
+}
+
+.earth {
+  width: 70%;
+  animation: spin 2.4s linear infinite;
+}
+
+.moon {
+  width: 25%;
+  top: -12.5%;
+  left: 37.5%;
+  animation: spin 70.8s linear infinite;
+  /* ADDDDDDDD */
+  /* moon - one day rotation duration = 65.52s */
+}
+
+.venus {
+  width: 4%;
+  top: -2%;
+  left: 48%;
+  animation: spin 583.2s linear infinite;
+}
+
+.mercury {
+  width: 2%;
+  top: -1%;
+  left: 49%;
+  animation: spin 140.8s linear infinite;
+}
+
+.sunContainer {
+  width: 90%;
+}
+
+.sun {
+  width: 100%;
+  /* animation: spin 1000000s linear infinite; */
+  box-shadow: 0px 5px 80px 0px rgb(255, 187, 1, 0.7),
+    0px 5px 80px 0px rgb(255, 85, 0, 0.7);
+}
+
+/* .plutoLine {
+  width: 60%;
+  height: auto;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  bottom: 80%;
+  right: 80%;
+} */

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="display" id="display">0</div>
+    <div class="keypad">
+      <div class="operands">
+        <button class="operand" onclick="clickNum('7');">7</button>
+        <button class="operand" onclick="clickNum('8');">8</button>
+        <button class="operand" onclick="clickNum('9');">9</button>
+        <button class="operand" onclick="clickNum('4');">4</button>
+        <button class="operand" onclick="clickNum('5');">5</button>
+        <button class="operand" onclick="clickNum('6');">6</button>
+        <button class="operand" onclick="clickNum('1');">1</button>
+        <button class="operand" onclick="clickNum('2');">2</button>
+        <button class="operand" onclick="clickNum('3');">3</button>
+        <button class="operand" onclick="clickNum('.');">.</button>
+        <button class="operand" onclick="clickNum('0');">0</button>
+        <button class="operand" onclick="clickNum('sign');">- / +</button>
+        <button class="operand ac" onclick="clickNum('ac');">AC</button>
+        <button class="operand clear" onclick="clickNum('clear');">
+          CLEAR
+        </button>
+        <button class="operand remove" onclick="clickNum('<');"></button>
+      </div>
+      <div class="operators">
+        <button class="operator" onclick="clickNum('/');">/</button>
+        <button class="operator" onclick="clickNum('*');">x</button>
+        <button class="operator" onclick="clickNum('-');">-</button>
+        <button class="operator" onclick="clickNum('+');">+</button>
+        <button class="operator result" onclick="clickNum('=');">=</button>
+      </div>
+    </div>
+
+    <script src="../calculator/script.js"></script>
+  </body>
+</html>
