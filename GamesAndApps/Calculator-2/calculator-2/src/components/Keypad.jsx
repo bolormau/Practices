@@ -90,9 +90,8 @@ export const Keypad = () => {
         return (
           <Button
             key={i + Math.random()}
-            label={keypadValue.label}
             color={keypadValue.isOperand ? "#161619" : "indigo"}
-          />
+          >{keypadValue.label}</Button>
         );
       })}
     </div>
