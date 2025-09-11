@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { Display } from "../_components/Display"
 
+=======
+>>>>>>> ae152e6 (merging Button comp)
 export const Button = ({ label, clicked }) => {
   return (
     <button
@@ -7,6 +10,7 @@ export const Button = ({ label, clicked }) => {
       `}
       onClick={clicked}
     >
+<<<<<<< HEAD
       {label}
     </button>
   );
@@ -21,10 +25,13 @@ export const Button2 = ( {label, clicked} ) => {
         }
         `}
       onClick={clicked}>
+=======
+>>>>>>> ae152e6 (merging Button comp)
       {label}
     </button>
   );
 };
+<<<<<<< HEAD
 
 export const Button3 = ({ setUsername, setPassword, setUserInfo, username, password }) => {
   return (
@@ -41,3 +48,5 @@ export const Button3 = ({ setUsername, setPassword, setUserInfo, username, passw
     </button>
   );
 };
+=======
+>>>>>>> ae152e6 (merging Button comp)

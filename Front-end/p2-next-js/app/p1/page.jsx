@@ -12,8 +12,8 @@ import { Button } from "../../_components/Button";
 const Home = () => {
   const [value, setValue] = useState("");
 
-  function change(value) {
-    setValue(value);
+  function change(newvalue) {
+    setValue(newvalue);
   }
 
   return (
