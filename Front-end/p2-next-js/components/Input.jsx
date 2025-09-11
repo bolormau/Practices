@@ -1,4 +1,6 @@
-export const Input = ({ label, value, setValue }) => {
+export const Input = (props) => {
+  const { label, value, setValue } = props; 
+  
   return (
     <div className="flex flex-col gap-1">
       <label htmlFor="inputLabel" className="text-[12px] opacity-50 font-mono">

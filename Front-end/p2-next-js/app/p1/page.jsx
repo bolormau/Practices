@@ -7,7 +7,7 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "../../_components/Button";
+import { Button, HomeButton } from "../../components/Button";
 
 const Home = () => {
   const [value, setValue] = useState("");
@@ -19,13 +19,23 @@ const Home = () => {
   return (
     <div className="frame w-full h-[100vh] flex flex-col place-content-center items-center gap-2">
       <div className="w-100 h-15 flex place-content-center items-center gap-2">
-        <Button clicked={() => change("Hi, I'm Alice!")} label="Name" info="Alice"></Button>
-        <Button clicked={() => change("I'm 20 years old.")} label="Age" info="20"></Button>
-        <Button clicked={() => change("I'm girl.")} label="Gender" info="female"></Button>
+        <Button
+          clicked={() => change("Hi, I'm Alice!")}
+          label="Name"
+        ></Button>
+        <Button
+          clicked={() => change("I'm 20 years old.")}
+          label="Age"
+        ></Button>
+        <Button
+          clicked={() => change("I'm girl.")}
+          label="Gender"
+        ></Button>
       </div>
       <div className="w-80 h-30 flex place-content-center items-center text-[14px] text-pink-100 font-mono border-1 border-pink-300">
         {value}
       </div>
+      <HomeButton label={"↩ Home"} link={"../"}></HomeButton>
     </div>
   );
 };

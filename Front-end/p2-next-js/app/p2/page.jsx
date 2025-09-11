@@ -5,21 +5,21 @@
 // Тухайн тоолуурын утгыг дэлгэц дээр харуулж, дарсан тохиолдолд нэмэгдэж/хорогдох ёстой.
 // 💡 Зорилго: тоон state удирдах.
 
-'use client'
+"use client";
 
-import { useState } from 'react';
-import { Button } from "../../_components/Button"
+import { useState } from "react";
+import { Button, HomeButton } from "../../components/Button";
 
 const Home = () => {
   let [value, setValue] = useState(0);
 
   function change(newValue) {
-    if(newValue == "+") setValue(value++);
-    else if(newValue == "-") setValue(value--);
+    if (newValue == "+") setValue(value++);
+    else if (newValue == "-") setValue(value--);
   }
 
   return (
-    <div className='frame w-full h-[100vh] flex flex-col place-content-center items-center gap-2'>
+    <div className="frame w-full h-[100vh] flex flex-col place-content-center items-center gap-2">
       <div className="w-100 h-15 flex place-content-center items-center gap-2">
         <Button clicked={() => change("-")} label="-1"></Button>
         <Button clicked={() => change("+")} label="+1"></Button>
@@ -27,6 +27,7 @@ const Home = () => {
       <div className="w-50 h-30 flex place-content-center items-center text-[14px] text-pink-100 font-mono border-1 border-pink-300">
         {value}
       </div>
+      <HomeButton label={"↩ Home"} link={"../"}></HomeButton>
     </div>
   );
 };

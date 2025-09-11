@@ -11,9 +11,9 @@
 "use client";
 
 import { useState } from "react";
-import { Button3 } from "../../_components/Button";
-import { Display } from "../../_components/Display";
-import { Input } from "../../_components/Input";
+import { LoginButton, HomeButton } from "../../components/Button";
+import { Display } from "../../components/Display";
+import { Input } from "../../components/Input";
 
 const Home = () => {
   let [username, setUsername] = useState("");
@@ -38,8 +38,8 @@ const Home = () => {
             ></Input>
           </div>
           <div className="w-60 h-15 flex place-content-center items-center gap-2">
-            <Button3
-              label="pink"
+            <LoginButton
+              label="log-in"
               setUserInfo={(username, password) => {
                 setUserInfo({ name: username, pwd: password, show: "flex" });
               }}
@@ -47,7 +47,7 @@ const Home = () => {
               setPassword={setPassword}
               username={username}
               password={password}
-            ></Button3>
+            ></LoginButton>
           </div>
         </div>
         <div className={`w-80 h-20 flex content-center items-center`}>
@@ -58,6 +58,7 @@ const Home = () => {
           ></Display>
         </div>
       </div>
+      <HomeButton label={"↩ Home"} link={"../"}></HomeButton>
     </div>
   );
 };
